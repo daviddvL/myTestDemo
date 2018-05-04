@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.davidliu.demo"
-        minSdkVersion 18
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -22,17 +23,18 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.1.0'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:runner:1.0.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestCompile 'com.android.support:support-annotations:26.1.0'
 
 
 
     //base
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
 //    compile 'com.android.support:appcompat-v7:25.1.0'
-//    compile rootProject.ext.dependencies["design"]
+    compile 'com.android.support:design:26.1.0'
 //    compile rootProject.ext.dependencies["recyclerview-v7"]
 //    compile rootProject.ext.dependencies["cardview-v7"]
 //
@@ -41,7 +43,7 @@ dependencies {
 //    compile rootProject.ext.dependencies["materialsearchview"]
 //    compile rootProject.ext.dependencies["multiline-collapsingtoolbar"]
 //    compile rootProject.ext.dependencies["PhotoView"]
-//    compile rootProject.ext.dependencies["glide-transformations"]
+    compile 'jp.wasabeef:glide-transformations:1.2.1'
 //    compile rootProject.ext.dependencies["html-textview"]
 
 
@@ -65,27 +67,26 @@ dependencies {
 
 
 
-//    //di
+    //di
     compile 'com.google.dagger:dagger:2.0.2'
-    compile 'com.google.dagger:dagger-compiler:2.0.2'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0.2'
     compile 'com.jakewharton:butterknife:8.4.0'
-//    apt 'com.jakewharton:butterknife-compiler:8.4.0'
-
-//    provided 'org.glassfish:javax.annotation:10.0-b28'
-
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
 
 
 
 
-//    //other
+
+    //other
 //    compile rootProject.ext.dependencies["multidex"]
-//    compile rootProject.ext.dependencies["logger"]
-//    compile rootProject.ext.dependencies["fragmentation"]
-//    compile rootProject.ext.dependencies["crashreport"]
-//
-//    //canary
-//    debugCompile rootProject.ext.dependencies["blockcanary-android"]
-//    releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
-//    debugCompile rootProject.ext.dependencies["leakcanary-android"]
-//    releaseCompile rootProject.ext.dependencies["leakcanary-android-no-op"]
+    compile 'com.orhanobut:logger:1.15'
+    compile 'me.yokeyword:fragmentation:0.10.4'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+
+    //canary
+    debugCompile 'com.github.moduth:blockcanary-android:1.2.1'
+    releaseCompile 'com.github.moduth:blockcanary-no-op:1.2.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 }

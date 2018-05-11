@@ -22,6 +22,8 @@ android {
 }
 
 dependencies {
+
+    compile 'com.getbase:floatingactionbutton:1.9.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:runner:1.0.2'
@@ -40,7 +42,7 @@ dependencies {
 //
 //    //ui
 //    compile rootProject.ext.dependencies["material-calendarview"]
-//    compile rootProject.ext.dependencies["materialsearchview"]
+    compile rootProject.ext.dependencies["materialsearchview"]
 //    compile rootProject.ext.dependencies["multiline-collapsingtoolbar"]
 //    compile rootProject.ext.dependencies["PhotoView"]
     compile 'jp.wasabeef:glide-transformations:1.2.1'

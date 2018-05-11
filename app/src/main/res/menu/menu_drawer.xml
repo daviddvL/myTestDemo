@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/drawer_group_content">
+        <menu>
+            <item
+                android:id="@+id/menu_item_mm"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:checked="true"
+                android:title="@string/drawer_item_mm"/>
+            <item
+                android:id="@+id/menu_item_memory"
+                android:icon="@mipmap/ic_launcher"
+                android:checkable="true"
+                android:title="@string/drawer_item_memory"/>
+            <item
+                android:id="@+id/menu_item_sdcard"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:title="@string/drawer_item_sdcard"/>
+            <item
+                android:id="@+id/menu_item_otg"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:title="@string/drawer_item_otg"/>
+            <item
+                android:id="@+id/menu_item_collection"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:title="@string/drawer_item_collection"/>
+            <item
+                android:id="@+id/menu_item_secret"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:title="@string/drawer_item_secret"/>
+        </menu>
+    </item>
+    <item android:title="@string/drawer_group_options">
+        <menu>
+            <item
+                android:id="@+id/menu_item_setting"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:title="@string/drawer_item_setting"/>
+            <item
+                android:id="@+id/menu_item_about"
+                android:checked="false"
+                android:icon="@mipmap/ic_launcher_round"
+                android:checkable="true"
+                android:title="@string/drawer_item_about"/>
+        </menu>
+    </item>
+</menu>

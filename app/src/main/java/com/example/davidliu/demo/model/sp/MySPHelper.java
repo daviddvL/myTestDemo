@@ -22,11 +22,11 @@ public class MySPHelper implements SpHelper {
     private static final boolean DEFAULT_VERSION_POINT = false;
     private static final boolean DEFAULT_MANAGER_POINT = false;
 
-    private static final int DEFAULT_CURRENT_ITEM = Constants.TYPE_ZHIHU;
+    private static final int DEFAULT_CURRENT_ITEM = Constants.TYPE_MM;//默认显示的模块ID
 
     private static final String SHAREDPREFERENCES_NAME = "my_sp";
 
-    private final SharedPreferences mSPrefs;
+    private final SharedPreferences  mSPrefs;
 
     @Inject
     public MySPHelper() {
@@ -34,13 +34,12 @@ public class MySPHelper implements SpHelper {
     }
 
     @Override
-    public boolean getNightModeState() {
-        return mSPrefs.getBoolean(Constants.SP_NIGHT_MODE, DEFAULT_NIGHT_MODE);
+    public int getCurrentItem() {
+        return mSPrefs.getInt(Constants.SP_CURRENT_ITEM, DEFAULT_CURRENT_ITEM);
     }
 
     @Override
-    public void setNightModeState(boolean state) {
-        mSPrefs.edit().putBoolean(Constants.SP_NIGHT_MODE, state).apply();
+    public void setCurrentItem(int item) {
+        mSPrefs.edit().putInt(Constants.SP_CURRENT_ITEM, item).apply();
     }
-
 }

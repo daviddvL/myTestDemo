@@ -78,6 +78,8 @@ public class InitService extends IntentService {
         String processName = SystemUtil.getProcessName(android.os.Process.myPid());
         CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
         strategy.setUploadProcess(processName == null || processName.equals(packageName));
+        //TODO　建议在测试阶段建议设置成true，发布时设置为false。
         CrashReport.initCrashReport(context, Constants.BUGLY_ID, isDebug, strategy);
+        CrashReport.testJavaCrash();
     }
 }

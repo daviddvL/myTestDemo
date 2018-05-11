@@ -4,5 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <!--<color name="main_bg">#576cef</color>-->
     <color name="toast_bg">#dddfe0</color>
+
+    <color name="drawer_item_bg_pick">#e8e8e8</color>
+    <color name="drawer_item_bg_normal">#fffff9</color>
+    <color name="drawer_header_text">#2c2c2c</color>
+
+    //float Btn 背景色
+    <color name="fab_bg">#4b50e7</color>
+
+    <color name="Tab_text_normal">#fffff9</color>
+    <color name="Tab_text_select">#ff6b00</color>
 </resources>

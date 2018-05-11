@@ -3,6 +3,7 @@ package com.example.davidliu.demo.ui.main.activity;
 import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.davidliu.demo.R;
@@ -11,6 +12,8 @@ import com.example.davidliu.demo.base.contract.main.WelcomeContract;
 import com.example.davidliu.demo.component.ImageLoader;
 import com.example.davidliu.demo.model.bean.WelcomeBean;
 import com.example.davidliu.demo.presenter.main.WelcomePresenter;
+import com.example.davidliu.demo.utils.LogUtil;
+import com.example.davidliu.demo.utils.ToastUtil;
 
 import butterknife.BindView;
 
@@ -28,8 +31,7 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements W
     @Override
     protected void initInject() {
 
-        // TODO: 获取ActivityComponent
-        //getActivityComponent().inject(this);
+        getActivityComponent().inject(this);
 
     }
 
@@ -49,6 +51,7 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements W
         ImageLoader.load(this, welcomeBean.getImg(), iv_welcomeBg);
         iv_welcomeBg.animate().scaleX(1.12f).scaleY(1.12f).setDuration(2000).setStartDelay(100).start();
         tv_welcomeAuthor.setText(welcomeBean.getText());
+        ToastUtil.show("-----"+welcomeBean.getText());
     }
 
     @Override

@@ -9,7 +9,11 @@ public interface SpHelper {
     //TODO: SP Helper 接口
 
     //夜间模式
-    boolean getNightModeState();
-    void setNightModeState(boolean state);
+//    boolean getNightModeState();
+//    void setNightModeState(boolean state);
+
+    int getCurrentItem();
+
+    void setCurrentItem(int item);
 
 }

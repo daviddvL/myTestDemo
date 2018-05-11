@@ -1,0 +1,29 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+
+        <!--<item name="actionMenuTextColor">#ffffff</item>-->
+
+        <!--//沉浸状态栏-->
+        <!--&lt;!&ndash;<item name="android:windowIsTranslucent">true</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:windowTranslucentStatus">true</item>&ndash;&gt;-->
+
+        <!--//设置状态栏颜色-->
+        <!--<item name="android:statusBarColor">@color/colorAccent</item>-->
+        <!--//ActionBarDrawerToggle设置颜色-->
+        <!--<item name="colorControlNormal">@android:color/white</item>-->
+
+        <!--//全应用都只允许竖屏-->
+        <!--<item name="android:screenOrientation">portrait</item>-->
+    <!--</style>-->
+
+    <!--<style name="SplashTheme" parent="AppTheme">-->
+        <!--<item name="android:windowBackground">@drawable/splash_bg</item>-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+    <!--</style>-->
+</resources>

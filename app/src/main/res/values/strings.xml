@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">Demo</string>
-</resources>
+    <string name="app_name">朗科_MM</string>
+    <string name="app_introduce">Netac Memory Manager</string>
+
+
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="drawer_group_content">朗科MM</string>
+    <string name="drawer_group_options">选项</string>
+
+    <string name="drawer_item_mm">我的MM</string>
+    <string name="drawer_item_memory">内部存储</string>
+    <string name="drawer_item_sdcard">SD卡</string>
+    <string name="drawer_item_otg">朗科闪存盘</string>
+    <string name="drawer_item_collection">收藏夹</string>
+    <string name="drawer_item_secret">保密柜</string>
+    <string name="drawer_item_setting">设置</string>
+    <string name="drawer_item_about">关于</string>
+
+
+    <string name="action_search">搜索</string>
+    <string name="action_sort_way">排序方式</string>
+    <string name="action_sort_order">排序顺序</string>
+    <string name="action_options">查看选项</string>
+    <string name="action_operation">文件操作</string>
+
+    <string name="error_tips">糟糕！加载失败了ヽ(≧Д≦)ノ\n
+        偷偷告诉你一些可能的原因：\n
+        1.惨不忍睹的网络环境\n
+        2.服务器君的不定期抽风\n
+        3.GeekNews现在心情不好拒绝服务喔~</string>
+
+    </resources>

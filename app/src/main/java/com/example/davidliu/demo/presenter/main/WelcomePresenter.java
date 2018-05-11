@@ -4,6 +4,7 @@ import com.example.davidliu.demo.base.RxPresenter;
 import com.example.davidliu.demo.base.contract.main.WelcomeContract;
 import com.example.davidliu.demo.model.DataManager;
 import com.example.davidliu.demo.model.bean.WelcomeBean;
+import com.example.davidliu.demo.utils.LogUtil;
 import com.example.davidliu.demo.utils.RxUtil;
 
 import java.util.concurrent.TimeUnit;
@@ -51,7 +52,7 @@ public class WelcomePresenter extends RxPresenter<WelcomeContract.View> implemen
         );
     }
 
-    private void startCountDown() {
+    public void startCountDown() {
         addSubscribe(Flowable.timer(COUNT_DOWN_TIME, TimeUnit.MILLISECONDS)
                 .compose(RxUtil.<Long>rxSchedulerHelper())
                 .subscribe(new Consumer<Long>() {

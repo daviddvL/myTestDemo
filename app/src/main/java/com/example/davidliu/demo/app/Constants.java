@@ -11,7 +11,14 @@ import java.io.File;
 public class Constants {
 
     //================= TYPE ====================
-    public static final int TYPE_ZHIHU = 101; //知乎模块
+    public static final int TYPE_MM = 101; //
+    public static final int TYPE_MEMORY = 102; //内部存储模块
+    public static final int TYPE_SDCARD = 103; //SD卡模块
+    public static final int TYPE_OTG = 104; //OTG模块
+    public static final int TYPE_COLLECTION = 105; //收藏夹模块
+    public static final int TYPE_SECRET = 106; //保密柜模块
+    public static final int TYPE_SETTING = 107; //设置模块
+    public static final int TYPE_ABOUT = 108; //关于模块
 
 
     //================= KEY ====================
@@ -31,8 +38,8 @@ public class Constants {
     //================= PREFERENCE ====================
 
     public static final String SP_NIGHT_MODE = "night_mode";
-
     public static final String SP_NO_IMAGE = "no_image";
+    public static final String SP_CURRENT_ITEM = "current_item";
 
 
     //================= INTENT ====================

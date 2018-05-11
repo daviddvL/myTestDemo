@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <application
         android:name=".app.MyApp"
         android:allowBackup="true"
@@ -19,7 +20,7 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:theme="@style/AppTheme">
-        //android:hardwareAccelerated="true"， 图片类比较多的界面加载速度变快,牺牲内存来提高响应速度的。
+        //android:hardwareAccelerated="true"， 牺牲内存来提高响应速度的。（图片等）
 
 
         <activity android:name=".ui.main.activity.WelcomeActivity"
@@ -33,6 +34,7 @@
         </activity>
 
         <activity android:name=".ui.main.activity.MainActivity"/>
+        <activity android:name=".ui.main.activity.AboutActivity"/>
 
     </application>
 

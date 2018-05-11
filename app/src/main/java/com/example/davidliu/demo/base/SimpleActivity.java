@@ -14,6 +14,7 @@ import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * Created by david.liu on 2018/5/2.
+ * 无MVP的activity基类
  */
 
 public abstract class SimpleActivity extends SupportActivity{

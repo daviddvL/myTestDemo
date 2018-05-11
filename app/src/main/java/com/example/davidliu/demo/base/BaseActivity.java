@@ -3,6 +3,10 @@ package com.example.davidliu.demo.base;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.ViewGroup;
 
+import com.example.davidliu.demo.app.MyApp;
+import com.example.davidliu.demo.di.component.ActivityComponent;
+import com.example.davidliu.demo.di.component.DaggerActivityComponent;
+import com.example.davidliu.demo.di.module.ActivityModule;
 import com.example.davidliu.demo.utils.SnackbarUtil;
 
 import javax.inject.Inject;
@@ -17,19 +21,17 @@ public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivi
     @Inject
     protected T mPresenter;
 
-    //TODO: 使用ActivityComponent
 
-//    protected ActivityComponent getActivityComponent(){
-//        return  DaggerActivityComponent.builder()
-//                .appComponent(App.getAppComponent())
-//                .activityModule(getActivityModule())
-//                .build();
-//    }
+    protected ActivityComponent getActivityComponent(){
+        return  DaggerActivityComponent.builder()
+                .myAppComponent(MyApp.getAppComponent())
+                .activityModule(getActivityModule())
+                .build();
+    }
 
-    //  TODO : 对外提供ActivityMoudle
-//    protected ActivityModule getActivityModule(){
-//        return new ActivityModule(this);
-//    }
+    protected ActivityModule getActivityModule(){
+        return new ActivityModule(this);
+    }
 
 
     @Override

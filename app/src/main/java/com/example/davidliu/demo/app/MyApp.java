@@ -9,6 +9,10 @@ import android.view.Display;
 import android.view.WindowManager;
 
 import com.example.davidliu.demo.component.InitService;
+import com.example.davidliu.demo.di.component.DaggerMyAppComponent;
+import com.example.davidliu.demo.di.component.MyAppComponent;
+import com.example.davidliu.demo.di.module.HttpModule;
+import com.example.davidliu.demo.di.module.MyAppModule;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,6 +26,7 @@ import java.util.Set;
 public class MyApp extends Application {
 
     private static MyApp instance;
+    public static MyAppComponent appComponent;
     private Set<Activity> allActivities;
 
     public static int SCREEN_WIDTH = -1;
@@ -108,14 +113,13 @@ public class MyApp extends Application {
         }
     }
 
-    //TODO Dagger2 依赖注入
-//    public static AppComponent getAppComponent(){
-//        if (appComponent == null) {
-//            appComponent = DaggerAppComponent.builder()
-//                    .appModule(new AppModule(instance))
-//                    .httpModule(new HttpModule())
-//                    .build();
-//        }
-//        return appComponent;
-//    }
+    public static MyAppComponent getAppComponent(){
+        if (appComponent == null) {
+            appComponent = DaggerMyAppComponent.builder()
+                    .myAppModule(new MyAppModule(instance))
+                    .httpModule(new HttpModule())
+                    .build();
+        }
+        return appComponent;
+    }
 }

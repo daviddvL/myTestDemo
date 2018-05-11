@@ -32,10 +32,12 @@ public class MyAppModule {
         return application;
     }
 
+
+    //TODO   提供datamanager实例
     @Provides
     @Singleton
     DataManager provideDataManager(HttpHelper httpHelper, SpHelper preferencesHelper) {
-        return new DataManager(httpHelper, preferencesHelper);
+        return new DataManager(httpHelper,preferencesHelper);
     }
 
     @Provides

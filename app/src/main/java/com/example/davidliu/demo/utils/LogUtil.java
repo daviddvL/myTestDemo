@@ -10,7 +10,7 @@ import com.example.davidliu.demo.BuildConfig;
 public class LogUtil {
 
     public static boolean isDebug = BuildConfig.DEBUG;
-    private static final String TAG = "com.david.demo";
+    private static final String TAG = "mylog";
 
     public static void e(String tag,Object o) {
         if(isDebug) {
@@ -33,9 +33,9 @@ public class LogUtil {
     }
 
     public static void d(String msg) {
-        if(isDebug) {
+//        if(isDebug) {
             Logger.d(msg);
-        }
+//        }
     }
 
     public static void i(String msg) {
